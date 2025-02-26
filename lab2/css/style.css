@@ -1,0 +1,211 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+body {
+    color: white;
+    background: radial-gradient(circle, #d0ff62, #0000ff);
+    line-height: 1.6;
+    transition: background 0.5s ease-in-out;
+}
+
+.container {
+    display: grid;
+    background-image: url('https://avatars.mds.yandex.net/i?id=868f003187a20d68a5b63d3da1c6020d_l-5734356-images-thumbs&n=13');
+    background-size:auto;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(2, 1fr);
+    padding: 80px 20px;
+    justify-items: center;
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    max-width: 100vw;
+    overflow: hidden;
+    animation: colorShift 5s linear infinite;
+}
+
+.bg-image {
+    width: 100vw;
+    height: 100vh;
+    object-fit:cover;
+    position: absolute;
+}
+
+.soap-bubble {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 30%; 
+    z-index: 3; 
+    object-fit: contain; 
+}
+
+.bubble-text {
+    position: absolute;
+    color: white;
+    font-size: 25px;
+    background: rgba(69, 27, 146, 0.6);
+    box-shadow: 0px 4px 10px rgba(201, 23, 218, 0.589);
+    top: 20%;
+    left: 60%; 
+    transform: translateX(-50%); /* Центрируем текст */
+    width: 90%; /* Делаем текст адаптивным */
+    max-width: 700px; /* Ограничиваем максимальную ширину */
+    min-width: 200px; /* Ограничиваем минимальную ширину */
+    z-index: 4;
+    object-fit: contain;
+    word-wrap: break-word; /* Перенос слов по необходимости */
+}
+
+@media (max-width: 768px) {
+    .bubble-text {
+        font-size: 20px; /* Уменьшаем размер шрифта на малых экранах */
+    }
+}
+
+@media (max-width: 320px) {
+    .bubble-text {
+        font-size: 16px; /* Ещё меньше шрифт на очень малых экранах */
+        width: 85%; /* Уменьшаем ширину текста на мобильных устройствах */
+    }
+}
+
+@keyframes colorShift {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+.rek1 {
+    position:relative;
+    left: 50%;
+    animation: scaleAnimation 3s infinite ease-in-out; 
+}
+
+@keyframes scaleAnimation {
+    0% {
+        transform: scale(1); 
+    }
+    50% {
+        transform: scale(1.5); 
+    }
+    100% {
+        transform: scale(1); 
+    }
+}
+
+.top-list {
+    font-size: 25px;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    list-style: none; 
+    counter-reset: list-counter; 
+}
+
+.rek2 {
+    position: absolute;
+    top: 0%;
+    left: 40%;
+}
+
+.rek2_pic {
+    width: 200px;
+    height: 320px;
+}
+
+.rek3 {
+    position: absolute;
+}
+
+.autoservis {
+    max-width: 320px;
+}
+
+@media (max-width: 320px) {
+    body {
+        font-size: 14px;
+    }
+
+    .top-list {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .top-list li {
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .soap-bubble {
+        width: 40%; /* Уменьшаем размер для маленьких экранов */
+        top: 15%;
+        left: 30%;
+    }
+
+    .bubble-text {
+        font-size: 18px;
+        width: 90%;
+        left: 5%;
+        top: 25%;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.reviews {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.reviews h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #14ff4f; 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.review {
+    background: linear-gradient(135deg, rgba(255, 105, 180, 0.8), rgba(0, 191, 255, 0.8));
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100px;
+}
+
+.review span {
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 10px;
+    display: block;
+    opacity: 0.8;
+}

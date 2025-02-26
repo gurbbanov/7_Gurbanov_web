@@ -1,0 +1,149 @@
+* {
+    font-family: 'Andika', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    padding-top: 80px;
+    background: radial-gradient(circle, #d0ff62, #0000ff);
+    line-height: 1.6;
+    transition: background 0.5s ease-in-out;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: rgba(8, 8, 8, 0.6);
+    backdrop-filter: blur(10px);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+h1, h2, h3, h4 {
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+h1 {
+    font-size: 28px;
+    color: #ffcc00;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+    color: #ff6600;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+a {
+    color: #ffcc00;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #ff6600;
+}
+
+img {
+    float: right;
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+ol {
+    padding-left: 20px;
+}
+
+li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 60%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    color: #fff;
+}
+
+caption {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+th, td {
+    border: 2px solid #ddd;
+    text-align: center;
+    padding: 10px;
+}
+
+th {
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffcc00;
+}
+
+td {
+    background: rgba(255, 255, 255, 0.2);
+    transition: background 0.3s;
+}
+
+td:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+q {
+    font-style: italic;
+    font-size: 20px;
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.4);
+    border-left: 4px solid #ffcc00;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header, h1, h2, h3, h4, p, li, table, q {
+    animation: fadeIn 0.8s ease-in-out;
+}
